@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gaming Galaxie</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body class="position-relative">
+    <div id="main_background"></div>
+
+    <nav class="navbar navbar-expand-lg p-5">
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="row gy-3">
+          <div
+            class="col-md-2 d-flex justify-content-center align-items-center"
+          >
+            <a
+              class="navbar-brand d-flex align-items-center gap-2 text-uppercase"
+              href="index.html"
+              ><img src="imgs/logo.png" />
+              <span class="title"
+                >Gaming <br />
+                Galaxie</span
+              ></a
+            >
+          </div>
+
+          <div class="col-md-8">
+            <div
+              class="collapse navbar-collapse d-flex flex-column"
+              id="navbarSupportedContent"
+            >
+              <div class="nav-info d-flex gap-4">
+                <p>Trending</p>
+                <p>Pre-orders</p>
+                <p>Upcoming</p>
+                <p>Support 24/7</p>
+              </div>
+              <ul class="navbar-nav mx-2 mb-lg-0">
+                <div class="row">
+                  <div class="col-md-3">
+                    <li
+                      class="nav-item d-flex gap-2 justify-content-center align-content-center px-4"
+                    >
+                      <i class="fa-solid fa-desktop"></i>
+                      <a class="nav-link text-uppercase" href="#">pc</a>
+                    </li>
+                  </div>
+                  <div class="col-md-3">
+                    <li
+                      class="nav-item d-flex gap-2 justify-content-center align-content-center px-4"
+                    >
+                      <i class="fa-brands fa-playstation"></i>
+                      <a class="nav-link text-uppercase" href="#"
+                        >playstation</a
+                      >
+                    </li>
+                  </div>
+                  <div class="col-md-3">
+                    <li
+                      class="nav-item d-flex gap-2 justify-content-center align-content-center px-4"
+                    >
+                      <i class="fa-brands fa-xbox"></i>
+                      <a class="nav-link text-uppercase" href="#">xbox</a>
+                    </li>
+                  </div>
+                  <div class="col-md-2">
+                    <li
+                      class="nav-item d-flex gap-2 justify-content-center align-content-center px-4"
+                    >
+                      <i class="fa-solid fa-gamepad"></i>
+                      <a class="nav-link text-uppercase" href="#">nintendo</a>
+                    </li>
+                  </div>
+                </div>
+                <div
+                  class="search d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="col-md-2 d-flex justify-content-center align-items-center"
+          >
+            <div
+              class="user_controls d-flex justify-content-center align-items-center gap-3"
+            >
+              <i class="fa-solid fa-circle-half-stroke"></i>
+              <div
+                class="profile_section d-flex justify-content-center align-items-center gap-2"
+              >
+                <i class="fa-solid fa-circle-user user"></i>
+                <p class="mb-0">
+                  <span class="username_info fw-bold"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="main" class="pb-5">
+      <div
+        class="container main-bg p-5 d-flex justify-content-between align-items-end"
+      >
+        <div class="row gy-4 w-100">
+          <div class="col-md-6">
+            <div class="details d-flex flex-column gap-3">
+              <h2 class="game_name text-uppercase"></h2>
+              <p class="game_description"></p>
+              <p class="price"></p>
+              <button class="see_more btn">See More</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="games d-flex align-items-end h-100">
+              <div id="carouselExample" class="carousel w-100">
+                <div class="carousel-inner gap-3">
+                  <div
+                    class="carousel-item game active"
+                    style="background: url(imgs/games/LOL.png)"
+                  ></div>
+                  <div
+                    class="carousel-item game"
+                    style="background: url(imgs/games/control.png)"
+                  ></div>
+                  <div
+                    class="carousel-item game"
+                    style="background: url(imgs/games/gurdians.jpg)"
+                  ></div>
+                  <div
+                    class="carousel-item game"
+                    style="background: url(imgs/games/finals.jpeg)"
+                  ></div>
+                  <div
+                    class="carousel-item game"
+                    style="background: url(imgs/games/stray.jpg)"
+                  ></div>
+                  <div
+                    class="carousel-item game"
+                    style="background: url(imgs/games/hogwarts.jpg)"
+                  ></div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExample"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="games_" class="py-4">
+      <div class="container">
+        <div class="row games_main_row">
+          <div class="col-12">
+            <div
+              class="catergorty position-relative d-flex justify-content-between align-items-center p-3"
+            >
+              <h3 class="categories_name h3 text-capitalize">Shooter</h3>
+              <select id="category_options" class="form-select">
+                <option value="shooter">Shooter</option>
+                <option value="mmorpg">MMORGB</option>
+                <option value="anime">Anime</option>
+                <option value="strategy">Strategy</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="racing">Racing</option>
+                <option value="sports">Sports</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row gy-5 gx-4 gamesData"></div>
+          </div>
+          <div
+            class="col-12 d-flex justify-content-end align-items-center w-100"
+          >
+            <button
+              class="btn see_more d-flex justify-content-center align-items-center gap-2"
+            >
+              See more <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-5">
+      <div class="container py-5 px-4">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="feature d-flex align-items-center gap-3">
+              <i class="fa-solid fa-download fs-1" style="color: #4799eb"></i>
+              <div class="detail">
+                <h3 class="text-capitalize">Ultra rapide</h3>
+                <p class="mb-0">Enjoy high speed download</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature d-flex align-items-center gap-3">
+              <i
+                class="fa-solid fa-shield-halved fs-1"
+                style="color: #4799eb"
+              ></i>
+              <div class="detail">
+                <h3 class="text-capitalize">Reliable and safe</h3>
+                <p class="mb-0">There're no viruses or ads</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature d-flex align-items-center gap-3">
+              <i
+                class="fa-regular fa-comment-dots fs-1"
+                style="color: #4799eb"
+              ></i>
+              <div class="detail">
+                <h3 class="text-capitalize">Client service</h3>
+                <p class="mb-0">Consultants available 24/7</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature d-flex align-items-center gap-3">
+              <i
+                class="fa-solid fa-rotate-right fs-1"
+                style="color: #4799eb"
+              ></i>
+              <div class="detail">
+                <h3 class="text-capitalize">Always up-to-date</h3>
+                <p class="mb-0">Find all new free-to-play games</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="py-4">
+      <div class="container">
+        <div class="row gap-5">
+          <div class="col-12">
+            <div
+              class="topic position-relative d-flex justify-content-between align-items-center p-3"
+            >
+              <h3 class="h3 text-capitalize">our reviews</h3>
+              <button class="btn see_more happy_btn">
+                +20,000 Happy Visitor
+              </button>
+            </div>
+          </div>
+          <div class="col-12 pt-3">
+            <div class="row gy-5">
+              <div class="col-md-3">
+                <div
+                  class="review position-relative d-flex justify-content-between align-items-center flex-column gap-3"
+                >
+                  <img src="imgs/bg.jpg" class="profile_pic" />
+                  <div
+                    class="stars d-flex justify-content-between align-items-center gap-1"
+                  >
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="review_content text-center mb-0">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Itaque commodi sit harum quibusdam odit magnam.
+                  </p>
+                  <h5 class="text-capitalize">- kylie jordan</h5>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="review position-relative d-flex justify-content-between align-items-center flex-column gap-3"
+                >
+                  <img src="imgs/bg.jpg" class="profile_pic" />
+                  <div
+                    class="stars d-flex justify-content-between align-items-center gap-1"
+                  >
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="review_content text-center mb-0">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Itaque commodi sit harum quibusdam odit magnam.
+                  </p>
+                  <h5 class="text-capitalize">- kylie jordan</h5>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="review position-relative d-flex justify-content-between align-items-center flex-column gap-3"
+                >
+                  <img src="imgs/bg.jpg" class="profile_pic" />
+                  <div
+                    class="stars d-flex justify-content-between align-items-center gap-1"
+                  >
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="review_content text-center mb-0">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Itaque commodi sit harum quibusdam odit magnam.
+                  </p>
+                  <h5 class="text-capitalize">- kylie jordan</h5>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="review position-relative d-flex justify-content-between align-items-center flex-column gap-3"
+                >
+                  <img src="imgs/bg.jpg" class="profile_pic" />
+                  <div
+                    class="stars d-flex justify-content-between align-items-center gap-1"
+                  >
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="review_content text-center mb-0">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Itaque commodi sit harum quibusdam odit magnam.
+                  </p>
+                  <h5 class="text-capitalize">- kylie jordan</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="games_categories" class="py-4 my-5">
+      <div class="container position-relative">
+        <div class="row games_main_row">
+          <div class="col-12">
+            <div
+              class="position-relative d-flex justify-content-between align-items-center p-3"
+            >
+              <h3 class="h3 text-capitalize">categories</h3>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="row gy-5 gx-4">
+              <div class="col-md-4">
+                <div
+                  class="category d-flex justify-content-between align-items-center"
+                  style="background-color: #ffce4f"
+                  data-category="arcade"
+                >
+                  <h4 class="category_name">Arcade</h4>
+                  <div class="category_img">
+                    <img src="imgs/charcters/arcade.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="category d-flex justify-content-between align-items-center"
+                  style="background-color: #4d3323"
+                  data-category="adventure"
+                >
+                  <h4 class="category_name">Adventure</h4>
+                  <div class="category_img">
+                    <img src="imgs/charcters/adevnture.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="category d-flex justify-content-between align-items-center"
+                  style="background-color: #d2e6c6"
+                  data-category="anime"
+                >
+                  <h4 class="category_name">Anime</h4>
+                  <div class="category_img">
+                    <img src="imgs/charcters/anime.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="category d-flex justify-content-between align-items-center"
+                  style="background-color: #be544b; background-size: cover"
+                  data-category="sports"
+                >
+                  <h4 class="category_name">eSports</h4>
+                  <div class="category_img">
+                    <img src="imgs/charcters/esports.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="category d-flex justify-content-between align-items-center"
+                  style="background-color: #44423a"
+                  data-category="shooter"
+                >
+                  <h4 class="category_name">Shooter</h4>
+                  <div class="category_img">
+                    <img src="imgs/charcters/shooter.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="category d-flex justify-content-between align-items-center"
+                  style="background-color: #af5d1a"
+                  data-category="strategy"
+                >
+                  <h4 class="category_name">Strategy</h4>
+                  <div class="category_img">
+                    <img src="imgs/charcters/strategy.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="category d-flex justify-content-between align-items-center"
+                  style="background-color: #86a2c3"
+                  data-category="racing"
+                >
+                  <h4 class="category_name">Racing</h4>
+                  <div class="category_img">
+                    <img src="imgs/charcters/cars.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="category d-flex justify-content-between align-items-center"
+                  style="background-color: #381b3b"
+                  data-category="horror"
+                >
+                  <h4 class="category_name">Horror</h4>
+                  <div class="category_img">
+                    <img src="imgs/charcters/horror.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="category d-flex justify-content-between align-items-center"
+                  style="background-color: #6b7d6a"
+                  data-category="fantasy"
+                >
+                  <h4 class="category_name">Fantasy</h4>
+                  <div class="category_img">
+                    <img src="imgs/charcters/fantasy.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="loading d-none position-fixed d-flex justify-content-center align-items-center"
+    >
+      <span class="loader"></span>
+    </div>
+
+    <footer id="footer" class="p-2">
+      <div
+        class="container border-top mt-5 py-3 d-flex justify-content-center align-items-center"
+      >
+        <div class="row gy-3 w-100">
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <div class="copyright">© 2024 Gaming Galaxie, Inc</div>
+          </div>
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <a href="#" class="brand_logo"><img src="imgs/logo.png" /></a>
+          </div>
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <div class="links d-flex gap-3">
+              <a href="#">Home</a>
+              <a href="#" class="all_games">ALL GAMES</a>
+              <a href="#">Features</a>
+              <a href="#">FAQS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
