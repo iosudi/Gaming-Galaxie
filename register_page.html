@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <title>Sign Up With Gaming Galaxie</title>
     <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon" />
@@ -48,18 +48,28 @@
               <div
                 class="input_container input_name_container justify-content-between d-flex"
               >
-                <input
-                  type="text"
-                  id="firstNameInput"
-                  class="form-control name d-inline"
-                  placeholder="FIRST NAME"
-                />
-                <input
-                  type="text"
-                  id="lastNameInput"
-                  class="form-control name d-inline"
-                  placeholder="LAST NAME"
-                />
+                <div class="fn">
+                  <input
+                    type="text"
+                    id="firstNameInput"
+                    class="form-control name"
+                    placeholder="FIRST NAME"
+                  />
+                  <div class="invalid-feedback">
+                    characters must be between 3 - 10
+                  </div>
+                </div>
+                <div class="ln">
+                  <input
+                    type="text"
+                    id="lastNameInput"
+                    class="form-control name"
+                    placeholder="LAST NAME"
+                  />
+                  <div class="invalid-feedback">
+                    characters must be between 3 - 10
+                  </div>
+                </div>
               </div>
               <div class="input_container">
                 <input
@@ -68,6 +78,9 @@
                   class="w-100 form-control"
                   placeholder="EMAIL"
                 />
+                <div class="invalid-feedback">
+                  your email must follow the following example@domain.com
+                </div>
               </div>
               <div class="input_container">
                 <input
@@ -76,6 +89,10 @@
                   class="w-100 form-control"
                   placeholder="PASSWORD"
                 />
+                <div class="invalid-feedback">
+                  at least 8 characters, including both letters and numbers, one
+                  special character.
+                </div>
               </div>
               <div class="input_container">
                 <input
@@ -84,10 +101,13 @@
                   class="form-control w-100"
                   placeholder="AGE"
                 />
+                <div class="invalid-feedback">
+                  age must be between 10 - 80 years old
+                </div>
               </div>
               <p class="msg mb-0 mx-auto text-center text-danger"></p>
               <button id="submit" type="submit" class="btn see_more">
-                Sign In
+                Sign Up
               </button>
             </form>
             <p class="mb-0 mx-auto text-center">

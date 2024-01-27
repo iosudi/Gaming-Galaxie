@@ -70,3 +70,9 @@ submitBtn.on("click", (e) => {
   e.preventDefault();
   getAccount();
 });
+
+if (localStorage.getItem("theme") != null) {
+  const themeData = localStorage.getItem("theme");
+
+  $("html").attr("data-theme", themeData);
+}

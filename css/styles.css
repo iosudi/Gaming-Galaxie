@@ -1,9 +1,44 @@
+[data-theme="dark"] {
+  --main-color: #23272f;
+  --secondary-color: #333a45;
+  --nav-color: #333a45;
+  --opacity-color: #23272fce;
+  --loading-screen-color: #212529a2;
+  --secondary-opacity-color: #333a45;
+  --text-color: white;
+  --footer-color: #212529;
+  --span-color: #2a2e39;
+}
+
+[data-theme="light"] {
+  --main-color: #fff;
+  --secondary-color: ##f7f8f9;
+  --nav-color: #f4f5f7;
+  --opacity-color: #ffffffce;
+  --loading-screen-color: #f7f8f9a2;
+  --secondary-opacity-color: #f7f8f9a4;
+  --text-color: black;
+  --footer-color: #f5f6f7;
+  --span-color: #eeeeee;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4392e0;
+  border-radius: 20px;
+}
+
 body {
   background-repeat: no-repeat;
-  background-color: #23272f;
+  background-color: var(--main-color);
+  transition: 0.5s;
 }
 * {
-  color: white;
+  color: var(--text-color);
   list-style: none;
 }
 i {
@@ -20,7 +55,8 @@ i {
   z-index: -1;
   width: 100%;
   height: 120vh;
-  background: linear-gradient(#23272fce, #23272fce), url("../imgs/bg.jpg");
+  background: linear-gradient(var(--opacity-color), var(--opacity-color)),
+    url("../imgs/bg.jpg");
   background-size: cover;
 }
 #details-bg {
@@ -32,19 +68,21 @@ i {
   height: 100%;
   filter: blur(5px);
   -webkit-filter: blur(5px);
-  background: linear-gradient(#23272fce, #23272fce), url("../imgs/bg.jpg");
+  background: linear-gradient(var(--opacity-color), var(--opacity-color)),
+    url("../imgs/bg.jpg");
   background-size: cover;
 }
 #details-bg.form_page {
   filter: blur(10px);
   -webkit-filter: blur(10px);
-  background: linear-gradient(#23272fce, #23272fce), url("../imgs/form_bg.jpg");
+  background: linear-gradient(var(--opacity-color), var(--opacity-color)),
+    url("../imgs/form_bg.jpg");
   background-size: cover;
 }
 .navbar-nav {
   padding: 10px 80px;
   border-radius: 40px;
-  background-color: #333a45;
+  background-color: var(--nav-color);
 }
 
 nav .navbar-brand {
@@ -73,7 +111,7 @@ nav ul li:hover a {
 .nav-item {
   font-weight: 600;
   & a {
-    color: white;
+    color: var(--text-color);
   }
 }
 
@@ -92,12 +130,15 @@ nav .profile_section .logoutBtn {
 
 .see_more {
   background-color: #4799eb;
-  color: white;
+  color: #fff;
   padding: 10px 20px;
   width: 150px;
   font-weight: 500;
   &:hover {
     background-color: #4392e0;
+  }
+  & i {
+    color: white;
   }
 }
 
@@ -111,9 +152,11 @@ nav .profile_section .logoutBtn {
   .details {
     .game_name {
       font-size: 40px;
+      color: white;
     }
 
     .game_description {
+      color: white;
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
@@ -121,6 +164,7 @@ nav .profile_section .logoutBtn {
     }
     .price {
       font-size: 30px;
+      color: white;
       font-weight: 500;
     }
   }
@@ -157,7 +201,7 @@ nav .profile_section .logoutBtn {
     left: 0;
     width: 35%;
     height: 2px;
-    background: #333a45;
+    background: var(--secondary-color);
     z-index: 1;
   }
 }
@@ -174,7 +218,7 @@ nav .profile_section .logoutBtn {
   }
 }
 .card {
-  background: #333a45;
+  background: var(--secondary-color);
   border-radius: 20px !important;
   overflow: hidden;
   transition: 0.5s;
@@ -184,7 +228,7 @@ nav .profile_section .logoutBtn {
     box-shadow: 0 0 30px 2px #4391e033;
   }
   .card-title {
-    color: white;
+    color: var(--text-color);
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -196,6 +240,13 @@ nav .profile_section .logoutBtn {
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  .spans {
+    span {
+      background-color: var(--span-color);
+      padding: 0 10px;
+      border-radius: 5px;
+    }
+  }
 }
 .games_main_row {
   gap: 50px;
@@ -206,7 +257,7 @@ option {
 }
 
 #features .container {
-  background-color: #333a45;
+  background-color: var(--secondary-color);
   border-radius: 20px;
   box-shadow: 4px 10px 40px 1px #0000001e;
   .feature h3 {
@@ -224,7 +275,7 @@ option {
 }
 
 #reviews .review {
-  background: #333a45;
+  background: var(--secondary-color);
   border-radius: 20px;
   padding: 60px 15px 20px;
   & i {
@@ -244,7 +295,7 @@ option {
 
 #games_categories {
   .category {
-    color: #fff;
+    color: white;
     & h4 {
       font-size: 30px;
     }
@@ -273,13 +324,13 @@ option {
 }
 
 footer {
-  background: #212529;
+  background: var(--footer-color);
   .brand_logo img {
     width: 70px;
     cursor: pointer;
   }
   .links a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
   }
 }
@@ -319,7 +370,7 @@ footer {
       height: 100%;
       width: 2px;
       border-radius: 2px;
-      background-color: #333a45;
+      background-color: var(--secondary-color);
     }
     & h6 {
       font-size: 16px;
@@ -330,7 +381,7 @@ footer {
     }
   }
   .min_req {
-    background-color: #333a45;
+    background-color: var(--secondary-color);
     border-radius: 20px;
     & p {
       margin: 0;
@@ -353,16 +404,13 @@ body.form_page {
 
   .form-row {
     width: 900px;
-    background-color: #333a45a4;
+    background-color: var(--secondary-opacity-color);
     backdrop-filter: blur(5px);
     padding: 30px 20px;
     border-radius: 20px;
     .input_container {
       &.input_name_container {
         gap: 5px;
-        .name {
-          width: calc((100% / 2) - 5px) !important;
-        }
       }
       & input {
         font-weight: 500;
@@ -378,6 +426,14 @@ body.form_page {
 @media (max-width: 1199px) {
   nav .navbar-nav {
     padding: 10px 40px;
+  }
+
+  #games_ {
+    .card-body .spans {
+      flex-direction: column !important;
+      gap: 15px;
+      text-align: center;
+    }
   }
 }
 @media (max-width: 991px) {
@@ -435,7 +491,7 @@ body.form_page {
   height: 100%;
   width: 100%;
   z-index: 9;
-  background: #212529a2;
+  background: var(--loading-screen-color);
   backdrop-filter: blur(5px);
 }
 
@@ -445,7 +501,7 @@ body.form_page {
   border-radius: 50%;
   width: 108px;
   height: 108px;
-  color: #fff;
+  color: var(--text-color);
 }
 .loading .loader:before,
 .loading .loader:after {

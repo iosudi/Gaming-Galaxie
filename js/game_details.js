@@ -102,7 +102,7 @@ function showMoreGames(gamesObject) {
   $(".container .gameDetails").html(cards);
   $("#details-bg").css(
     "background",
-    ` linear-gradient(#23272fce, #23272fce), url("${gamesObject.thumbnail}")`
+    ` linear-gradient(var(--opacity-color), var(--opacity-color)), url("${gamesObject.thumbnail}")`
   );
   $("#details-bg").css("background-size", "cover");
   let smallImage = Array.from($(".container .small_img"));
@@ -120,3 +120,9 @@ function showMoreGames(gamesObject) {
 // image focus
 
 getMoreGames();
+
+if (localStorage.getItem("theme") != null) {
+  const themeData = localStorage.getItem("theme");
+
+  $("html").attr("data-theme", themeData);
+}

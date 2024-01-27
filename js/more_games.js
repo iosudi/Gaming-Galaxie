@@ -43,6 +43,10 @@ function showMoreGames(gamesObject) {
                       <p class="card-text">
                         ${gamesObject[i].short_description}
                       </p>
+                      <div class="spans d-flex justify-content-between border-top pt-3">
+                        <span>${gamesObject[i].genre} </span>
+                        <span>${gamesObject[i].platform}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -89,3 +93,30 @@ if (localStorage.getItem("token")) {
   });
 }
 getMoreGames();
+
+//handle dark/light theme
+
+const themeIcon = $("nav .user_controls .fa-circle-half-stroke");
+
+themeIcon.on("click", (e) => {
+  if (themeIcon.hasClass("dark")) {
+    $("html").attr("data-theme", "light");
+    themeIcon.toggleClass("dark light");
+    localStorage.setItem("theme", "light");
+  } else if (themeIcon.hasClass("light")) {
+    $("html").attr("data-theme", "dark");
+    themeIcon.toggleClass("light dark");
+    localStorage.setItem("theme", "dark");
+  }
+});
+
+if (localStorage.getItem("theme") != null) {
+  const themeData = localStorage.getItem("theme");
+
+  if (themeData == "light") {
+    themeIcon.toggleClass("light dark");
+  } else {
+    themeIcon.toggleClass("dark light");
+  }
+  $("html").attr("data-theme", themeData);
+}
